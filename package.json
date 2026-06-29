@@ -9,13 +9,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
     "react": "latest",
     "react-dom": "latest",
     "leaflet": "latest",
     "react-leaflet": "latest"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/leaflet": "latest"
+  }
 }
