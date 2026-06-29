@@ -1,0 +1,54 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #07111f;
+  color: #f4f7fb;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at top left, #14243a, #07111f 42%, #040812); }
+button, input { font: inherit; }
+
+.appShell { min-height: 100vh; padding: 22px; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+h1 { margin: 0; font-size: clamp(28px, 4vw, 44px); }
+p { margin: 4px 0 0; color: #aeb8c8; }
+.topStats { display: flex; gap: 20px; align-items: center; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); padding: 14px 18px; border-radius: 16px; }
+
+main { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(360px, .75fr); gap: 18px; }
+.mapPanel, .sidePanel .card, .guessBox { background: rgba(10, 22, 38, .82); border: 1px solid rgba(255,255,255,.1); border-radius: 18px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+.mapPanel { position: relative; overflow: hidden; min-height: 68vh; }
+.map { height: 100%; min-height: 68vh; width: 100%; filter: saturate(.95) contrast(1.02); }
+.photoBadge { position: absolute; z-index: 500; top: 16px; left: 16px; background: rgba(7,17,31,.88); border: 1px solid rgba(255,255,255,.14); padding: 10px 14px; border-radius: 12px; font-weight: 800; }
+.sidePanel { display: flex; flex-direction: column; gap: 14px; }
+.card, .guessBox { padding: 18px; }
+h2 { font-size: 18px; margin: 0 0 12px; }
+label { display: block; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 10px; }
+.guessRow { display: flex; gap: 10px; }
+input { flex: 1; border: 0; outline: 0; border-radius: 12px; padding: 14px 15px; color: #0b1220; background: #edf2f7; }
+button { border: 0; border-radius: 12px; padding: 13px 18px; font-weight: 800; color: #fff; background: linear-gradient(135deg, #36a852, #277d3e); cursor: pointer; }
+button:disabled { opacity: .4; cursor: not-allowed; }
+.secondary { background: rgba(255,255,255,.1); }
+.hintButton { width: 100%; background: linear-gradient(135deg, #3b67e8, #7143c7); }
+.suggestions { margin-top: 10px; display: grid; gap: 8px; }
+.suggestions button { text-align: left; background: rgba(255,255,255,.08); }
+.guessItem { display: flex; justify-content: space-between; align-items: center; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.08); gap: 10px; }
+.guessItem strong { color: #8ee36f; white-space: nowrap; }
+.muted { color: #8f9caf; }
+.statGrid { display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; }
+
+.modalBackdrop { position: fixed; inset: 0; background: rgba(0,0,0,.68); z-index: 1000; display: grid; place-items: center; padding: 20px; }
+.modal { width: min(560px, 100%); background: #101d31; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; padding: 26px; box-shadow: 0 30px 90px rgba(0,0,0,.55); }
+.success { color: #8ee36f; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.modal h2 { font-size: 36px; margin: 6px 0 0; }
+.country { margin-bottom: 14px; }
+.xp { display: inline-block; background: rgba(142,227,111,.15); color: #8ee36f; border: 1px solid rgba(142,227,111,.35); border-radius: 999px; padding: 10px 14px; font-weight: 900; margin-bottom: 16px; }
+.modalActions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+
+@media (max-width: 980px) {
+  .appShell { padding: 14px; }
+  header { align-items: flex-start; flex-direction: column; }
+  main { grid-template-columns: 1fr; }
+  .map, .mapPanel { min-height: 55vh; }
+  .guessRow { flex-direction: column; }
+}
