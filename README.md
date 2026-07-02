@@ -1,26 +1,21 @@
-# PlaatsRaden
+# PlaatsRaden v0.2.0
 
-Niet gokken. Oplossen.
+Eerste versie met Google Maps Satellite.
 
-## Eerste versie
-React + TypeScript + Vite + Leaflet.
+## Nodig in Vercel
+Environment variable:
 
-## Lokaal starten
+```txt
+VITE_GOOGLE_MAPS_API_KEY= jouw Google Maps API key
+```
+
+## Lokaal draaien
 ```bash
 npm install
 npm run dev
 ```
 
-## Deploy op Vercel
-- Upload deze bestanden naar GitHub
-- Importeer de repository in Vercel
-- Framework: Vite
-- Build command: `npm run build`
-- Output directory: `dist`
-
-## Roadmap
-- v0.1.0: basis gameplay, kaart, gokken, afstand, XP, popup
-- v0.2.0: hints, leermodus, betere stedenpool
-- v0.3.0: accounts + Supabase
-- v0.4.0: ranglijsten + challenge mode
-- v1.0.0: eerste publieke release
+## Build
+```bash
+npm run build
+```
